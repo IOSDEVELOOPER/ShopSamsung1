@@ -38,7 +38,7 @@ struct MainShopView: View {
                         }
                         .opacity(showFilterView ? 0.5 : 1)
                         TabBarView(mainStack: $mainStack)
-                    }
+                    }.allowsHitTesting(!showFilterView)
                     if showFilterView{
                         withAnimation(.spring()){
                             FilterView(showFilterView: $showFilterView)
